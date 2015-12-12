@@ -33,9 +33,10 @@ public class Fabricante {
 		return contato;
 	}
 	// ----------------- alterando informacoes -----------------
-			public void alterarDados(String nome){
+			public void alterarDados(String nome, Contato contato){
 
 				this.nome=nome;
+				this.contato=contato;
 			}
 	
 	

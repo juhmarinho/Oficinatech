@@ -14,10 +14,10 @@ public class ControleExclusao {
 		controlePatrimonio= new ControlePatrimonio();
 	}
 	
-	/*public String excluirUsuario(String matricula, String justificativa){ 
+	public String excluirCliente(String cpf){ 
 
-		return controleRh.excluirUsuario(matricula, justificativa);
-	}*/
+		return controleRh.excluirCliente(cpf);
+	}
 	public void excluirFuncionario(String matricula){
 
 		controleRh.excluirFuncionario(matricula);

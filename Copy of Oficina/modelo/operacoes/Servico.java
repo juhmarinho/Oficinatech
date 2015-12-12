@@ -107,7 +107,7 @@ public abstract class Servico implements Operacao{
 	}*/
 
 	@Override
-	public String gerarComprovante(){	
+	public String emitirNotaFiscal(){	
 
 		StringBuilder sb= new StringBuilder();
 

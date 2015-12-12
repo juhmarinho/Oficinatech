@@ -43,7 +43,7 @@ public class Operacoes {
 	}
 	
 
-	// ----------------- orÃ§amento,serviÃ§o ou reparo -----------------
+	// ----------------- orçamento,serviço ou reparo -----------------
 	
 	public String realizarOrcamento(Funcionario funcionario,String cpf, String placa){
 
@@ -62,15 +62,6 @@ public class Operacoes {
 	}
 }
 
-			/*if(carro.solicitarStatus().equals("Emprestado")) 
-				return "Exemplar indisponivel";
-
-			if(usuario.solicitaStatus().equals("Bloqueado"))
-				return "Usuario bloqueado.";
-
-			if(!usuario.permissaoEmprestimo())
-				return "Usuario atingiu o limite de operacoes permitido."; 
-*/
 			/*gerarCodigoOrcamento();
 			String codigo= String.valueOf(qntCodigoOrcamento);*/
 
@@ -90,21 +81,14 @@ public class Operacoes {
 		return orcamento;
 	}
 
-	private Servico criarServico(String codigo, Usuario usuario, Exemplar exemplar){
+	private Servico criarServico(String codigo_servico, Reparo reparo, Orcamento orcamento){ // Usuario - Reparo Exemplar - Orcamento
 
-		Emprestimo emprestimo= null;
+		Servico servico= null;
 
-		if(usuario instanceof Aluno)
-			emprestimo= new EmprestimoAluno(codigo, usuario, exemplar);
-
-		else if(usuario instanceof Professor)
-			emprestimo= new EmprestimoProfessor(codigo, usuario, exemplar);
-
-		else if(usuario instanceof Servidor)
-			emprestimo= new EmprestimoServidor(codigo, usuario, exemplar);
+		servico= new Servico(codigo_servico, reparo, orcamento);
 
 		exemplar.emprestar(); 
-		return emprestimo;
+		return servico;
 	}
 
 	public Emprestimo buscarEmprestimo(String codigoEmprestimo){

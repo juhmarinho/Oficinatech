@@ -2,5 +2,5 @@ package operacoes;
 
 public interface Operacao{
 
-	public abstract String gerarComprovante();
+	public abstract String emitirNotaFiscal();
 }

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 
 import patrimonio.Carro;
+import rh.Cliente;
 import rh.Funcionario;
 import controle.ControlePatrimonio;
 import controle.ControleRh;
@@ -19,16 +20,16 @@ public class ControleBusca {
 		controlePatrimonio= new ControlePatrimonio();
 	}
 	
-	/*public Usuario buscarUsuarioMatricula(String matricula){
+	public Cliente buscarClienteMatricula(String cpf){
 
-		return controleRh.buscarUsuarioMatricula(matricula);
+		return controleRh.buscarClienteMatricula(cpf);
 	}
-
-	public ArrayList<Usuario> buscarUsuarioNome(String nome){
-
-		return controleRh.buscarUsuarioNome(nome);
-	}
-	*/
+//
+//	public ArrayList<Cliente> buscarUsuarioNome(String nome){
+//
+//		return controleRh.buscarUsuarioNome(nome);
+//	}
+	
 	public Funcionario buscarFuncionarioMatricula(String matricula){
 
 		return controleRh.buscarFuncionarioMatricula(matricula);

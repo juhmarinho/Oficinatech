@@ -35,14 +35,14 @@ public class ControleOperacao {
 	}*/
 
 	// ----------------- busca -----------------	
-	/*public Emprestimo buscarEmprestimo(String codigoEmprestimo){
+	/*public Servico buscarServico(String codigoServico){
 
-		return operacoes.buscarEmprestimo(codigoEmprestimo);
+		return operacoes.buscarServico(codigoServico);
 	}
 	
-	public Emprestimo buscarDevolucao(String codigoEmprestimo){
+	public Reparo buscarReparo(String codigoReparo){
 
-		return operacoes.buscarDevolucao(codigoEmprestimo);
+		return operacoes.buscarReparo(codigoReparo);
 	}*/
 
 }

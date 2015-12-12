@@ -14,10 +14,10 @@ public class ControleCadastro {
 		controlePatrimonio= new ControlePatrimonio();
 	}
 
-	/*public String cadastrarUsuario(String nome, String vinculo, String cpf, String email, String telefone, String rua, String numero, String bairro, String cep, String cidade, String senha){
+	public String cadastrarCliente(String nome, String cpf, String email, String telefone, String rua, String numero, String bairro, String cep, String cidade){
 	
-		return controleRh.cadastrarUsuario(nome, vinculo, cpf, email, telefone, rua, numero, bairro, cep, cidade, senha);
-	}*/
+		return controleRh.cadastrarCliente(nome, cpf, email, telefone, rua, numero, bairro, cep, cidade);
+	}
 
 	public String cadastrarFuncionario(String nome, String funcao, String cpf, String email, String telefone, String rua, String numero, String bairro, String cep, String cidade, String senha){
 
@@ -28,6 +28,8 @@ public class ControleCadastro {
 
 		return controlePatrimonio.cadastrarCarro(marca,modelo,ano,cor,placa);
 	}
+	
+	//  fazer o cadastrar fornecedor, fabricante, peça...
 
 	/*public String cadastrarExemplar(String edicao, String isbn, String codigoObra){
 

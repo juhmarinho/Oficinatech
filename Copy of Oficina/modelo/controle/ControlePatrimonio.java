@@ -2,22 +2,23 @@ package controle;
 
 import java.util.ArrayList;
 
-
-
-
-
+import oficina.Categoria;
+import oficina.Fabricante;
+import oficina.Peca;
 import patrimonio.Carro;
+import principal.Fabrica;
 import principal.Oficina;
 import rh.Cliente;
 
 public class ControlePatrimonio {
 
 	  private Oficina oficina;
-	//private Biblioteca biblioteca;
+	  private Fabrica fabrica;
 
 	public ControlePatrimonio(){
 
-		oficina= Oficina.solicitaInstancia();		
+		oficina= Oficina.solicitaInstancia();	
+		fabrica=Fabrica.solicitaInstancia();
 	}
 
 	// ----------------- carro -----------------		
@@ -42,30 +43,31 @@ public class ControlePatrimonio {
 		// TODO Auto-generated method stub
 		return oficina.buscarCliente(cpf);
 	}
-	
-	/*// ----------------- obra -----------------	
-		public String cadastrarObra(String titulo, String autores, String assuntos, String editora, String observacoes){
+	// ----------------- peca -----------------	
+	public String cadastrarPeca(String codigo,Categoria categoria,String descricao,int qtdestoque,double valorcompra,double valorvenda,String localdeposito,String codigof){
 
-			return biblioteca.cadastrarObra(titulo, autores, assuntos, editora, observacoes);
-		}
+		return fabrica.cadastrarPeca(codigo, categoria, descricao, qtdestoque, valorcompra,  valorvenda, localdeposito, codigof);
+	}
 
-		public Obra buscarObraCodigo(String codigo){
-			
-			return biblioteca.buscarObraCodigo(codigo);
-		}
+	public Peca buscarPeca(String codigo){
 		
-		public ArrayList<Obra> buscarObraNome(String nome){
+		return fabrica.buscarPeca(codigo);
+	}
+	
+//	public ArrayList<Peca> buscarPecaNome(String nome){
+//
+//		return fabrica.buscarPecaNome(nome);
+//	}
 
-			return biblioteca.buscarObraNome(nome);
-		}
+	public String editarPeca(Peca peca,Categoria categoria,String descricao,int qtdestoque,double valorcompra,double valorvenda,String localdeposito,String codigof){
 
-		public String editarObra(Obra obra, String titulo, String autores, String assuntos, String editora, String observacoes){
+		return fabrica.editarPeca(peca, categoria,descricao, qtdestoque, valorcompra, valorvenda, localdeposito, codigof);
+	}
 
-			return biblioteca.editarObra(obra, titulo, autores, assuntos, editora, observacoes);
-		}
+	public String excluirPeca(String codigo){ 
 
-		public String excluirObra(String codigo, String justificativa){ 
+		fabrica.excluirPeca(codigo);
+		return codigo;
+	}
 
-			return biblioteca.excluirObra(codigo, justificativa);
-		}*/
 }

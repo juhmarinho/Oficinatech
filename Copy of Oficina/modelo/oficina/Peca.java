@@ -43,9 +43,14 @@ public class Peca {
 	
 
 	// ----------------- alterando informacoes -----------------
-	public void alterarDados(){
+	public void alterarDados(String descricao,int qtdestoque,double valorcompra,double valorvenda,String localdeposito){
 
-		
+		this.descricao=descricao;
+		this.localdeposito=localdeposito;
+		this.qtdestoque=qtdestoque;
+		this.valorcompra=valorcompra;
+		this.valorvenda=valorvenda;
+
 	}
 
 

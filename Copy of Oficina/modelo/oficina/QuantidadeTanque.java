@@ -3,8 +3,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 
-
-
 public enum QuantidadeTanque {
 	RESERVA, UMQUARTO,METADE,TRESQUARTOS,CHEIO;
 	

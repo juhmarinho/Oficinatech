@@ -36,9 +36,12 @@ public class Fornecedor {
 			return endereco;
 		}
 		// ----------------- alterando informacoes -----------------
-				public void alterarDados(String responsavel){
+				public void alterarDados(String responsavel, Contato contato, Endereco endereco){
 
 					this.responsavel=responsavel;
+					this.contato=contato;
+					this.endereco=endereco;
+					
 				}
 		
 		

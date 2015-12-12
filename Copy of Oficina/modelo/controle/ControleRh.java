@@ -3,6 +3,7 @@ package controle;
 import java.util.ArrayList;
 
 import principal.Oficina;
+import rh.Cliente;
 import rh.Contato;
 import rh.Endereco;
 import rh.Funcionario;
@@ -52,4 +53,30 @@ public class ControleRh {
 
 		oficina.excluirFuncionario(matricula);
 	}
+	
+	// ----------------- Cliente -----------------
+		public String cadastrarCliente(String nome, String cpf, String email, String telefone, String rua, String numero, String bairro, String cep, String cidade){
+		
+			return oficina.cadastrarCliente(nome, cpf, email, telefone, rua, numero, bairro, cep, cidade);
+		}
+
+		public Cliente buscarClienteMatricula(String cpf){
+			
+			return oficina.buscarCliente(cpf);
+		}
+		
+//		public ArrayList<Cliente> buscarClienteNome(String nome){
+//
+//			return oficina.buscarClienteNome(nome);
+//		}
+
+		public String editarCliente(Cliente cliente, String nome, String email, String telefone, String rua, String numero, String bairro, String cep, String cidade){
+
+			return oficina.editarCliente(cliente, nome, email, telefone, rua, numero, bairro, cep, cidade);
+		}
+
+		public String excluirCliente(String cpf){ 
+
+			return oficina.excluirCliente(cpf);
+		}
 }

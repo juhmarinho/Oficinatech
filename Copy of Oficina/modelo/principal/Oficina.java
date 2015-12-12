@@ -65,9 +65,6 @@ public class Oficina {
 
 		
 
-		
-		
-
 		// ----------------- Cliente -----------------		
 		public String cadastrarCliente(String nome, String cpf, String email, String telefone, String rua, String numero, String bairro, String cep, String cidade){
 
@@ -130,14 +127,21 @@ public class Oficina {
 			return "Preencha todos os campos.";
 		}
 
-		public void excluirCliente(String cpf){
+
+		public String excluirCliente(String cpf){ 
 
 			Cliente excluido= clientes.get(cpf);
-			clientes_excluidos.put(cpf, excluido);
-			clientes.remove(cpf);
-		}
 
-	
+				clientes_excluidos.put(cpf, excluido);
+				clientes.remove(cpf);
+				return "Exclusao realizada com sucesso";
+
+
+//			}else
+//				return "Exclusao nao realizada.\nCliente bloqueado."; 
+	}
+
+
 
 		// ----------------- carro -----------------	
 		public String cadastrarCarro(String marca, String modelo, String ano, String cor, String placa){

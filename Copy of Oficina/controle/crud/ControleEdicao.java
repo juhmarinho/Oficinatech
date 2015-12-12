@@ -1,6 +1,7 @@
 package crud;
 
 import patrimonio.Carro;
+import rh.Cliente;
 import rh.Contato;
 import rh.Endereco;
 import rh.Funcionario;
@@ -18,12 +19,13 @@ public class ControleEdicao {
 		controlePatrimonio= new ControlePatrimonio();
 	}
 
-	/*public String editarUsuario(Usuario usuario, String nome, String email, String telefone, String rua, String numero, String bairro, String cep, String cidade){
+	public String editarCliente(Cliente cliente, String nome, String email, String telefone, String rua, String numero, String bairro, String cep, String cidade){
 
-		return controleRh.editarUsuario(usuario, nome, email, telefone, rua, numero, bairro, cep, cidade);
+		return controleRh.editarCliente(cliente, nome, email, telefone, rua, numero, bairro, cep, cidade);
+	
 	}
 
-	public void alterarSenhaUsuario(Usuario usuario, String senha){
+	/*public void alterarSenhacliente(Usuario usuario, String senha){
 
 		controleRh.alterarSenhaUsuario(usuario, senha);
 	}*/
